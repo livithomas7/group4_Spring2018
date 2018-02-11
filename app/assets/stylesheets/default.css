@@ -6,7 +6,7 @@ html, body {
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 10pt;
 }
-div#main {
+div #main {
   margin: 0;
   padding: 0 20px 20px;
 }
@@ -33,18 +33,18 @@ h1.title {
   font-size: 2em;
   font-style: normal;
 }
-table#movies {
+table #movies {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
   border-bottom: 2px solid black;
 }
-table#movies th {
+table #movies th {
   border: 2px solid white;
   font-weight: bold;
   background-color: wheat;
 }
-table#movies th, table#movies td {
+table #movies th, table#movies td {
   padding: 4px;
   text-align: left;
 }
@@ -61,6 +61,6 @@ form label {
   
 }
 
-table#movies th.hilite {
+table #movies th.hilite {
   background-color: yellow;
 }
