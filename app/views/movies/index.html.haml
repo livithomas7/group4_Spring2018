@@ -1,19 +1,34 @@
--#  This file is app/views/movies/index.html.haml
-%h1 All Movies
+%h1 Welcome Tenants
 
-%table#movies
-  %thead
-    %tr
-      %th Movie Title
-      %th Rating
-      %th Release Date
-      %th More Info
+%table#tenants
   %tbody
-    - @movies.each do |movie|
-      %tr
-        %td= movie.title 
-        %td= movie.rating
-        %td= movie.release_date
-        %td= link_to "More about #{movie.title}", movie_path(movie)
+    %tr
+      %th Dashboard
+      //%td= link_to "Dashboard", tenant_path(dashboard)
+      %th Maintenance
+      %th Message
+      %th Documents
+      %th Payment
+%h1.align Profile 
 
-= link_to 'Add new movie', new_movie_path
+%table#user.center
+  %tbody 
+    %tr
+      %td Name:
+    %br
+    %tr
+      %td Age: 
+%img{:src => "/images/download.png"}
+
+/	%head
+/		%title= yield(:title)
+/		= yield(:head)
+/	%body
+/		%nav
+/			%a{ :href => "/views/tenant/dashboard", :title => "Dashboard" }
+/			%a{ :href => "/views/tenant/maintenance", :title => "Maintenance" }
+/			%a{ :href => "/views/tenant/message", :title => "Message" }
+/			%a{ :href => "/views/tenant/docs", :title => "Documents" }
+/			%a{ :href => "/views/tenant/payment", :title => "Payment" }
+/		#content
+/			= yield
