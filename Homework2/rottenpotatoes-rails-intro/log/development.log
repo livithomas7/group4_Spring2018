@@ -970,3 +970,41 @@ DEPRECATION WARNING: `#timestamps` was called without specifying an option for `
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2018-02-20 01:43:08.516691"], ["updated_at", "2018-02-20 01:43:08.516691"]]
   [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 76.25.101.242 at 2018-02-20 01:44:40 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+Redirected to https://97c72a984a194420b612d8a032968215.vfs.cloud9.us-east-2.amazonaws.com/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&ratings%5BR%5D=false&sort=title
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&ratings%5BR%5D=false&sort=title" for 76.25.101.242 at 2018-02-20 01:44:41 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"true", "PG"=>"true", "PG-13"=>"true", "R"=>"false"}, "sort"=>"title"}
+  [1m[36m (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 208ms (Views: 203.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 76.25.101.242 at 2018-02-20 01:46:39 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+Redirected to https://97c72a984a194420b612d8a032968215.vfs.cloud9.us-east-2.amazonaws.com/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&ratings%5BR%5D=false&sort=title
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&ratings%5BR%5D=false&sort=title" for 76.25.101.242 at 2018-02-20 01:46:39 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"true", "PG"=>"true", "PG-13"=>"true", "R"=>"false"}, "sort"=>"title"}
+  [1m[36m (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 207ms (Views: 203.2ms | ActiveRecord: 0.5ms)
