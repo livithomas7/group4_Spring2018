@@ -741,3 +741,152 @@ Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.3ms)
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 76.25.101.242 at 2018-02-20 01:14:05 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+Redirected to https://97c72a984a194420b612d8a032968215.vfs.cloud9.us-east-2.amazonaws.com/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&sort=title
+Completed 302 Found in 12ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&sort=title" for 76.25.101.242 at 2018-02-20 01:14:05 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"true", "PG"=>"true", "PG-13"=>"true"}, "sort"=>"title"}
+  [1m[36m (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 244ms (Views: 237.7ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 76.25.101.242 at 2018-02-20 01:15:28 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+Redirected to https://97c72a984a194420b612d8a032968215.vfs.cloud9.us-east-2.amazonaws.com/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&sort=title
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&sort=title" for 76.25.101.242 at 2018-02-20 01:15:28 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"true", "PG"=>"true", "PG-13"=>"true"}, "sort"=>"title"}
+  [1m[36m (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 206ms (Views: 202.0ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMovies (20150809022253)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "movies"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20150809022253"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMovies (20150809022253)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/ec2-user/environment/Homework2/rottenpotatoes-rails-intro/db/migrate/20150809022253_create_movies.rb:10)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150809022253"]]
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2018-02-20 01:16:43.241861"], ["updated_at", "2018-02-20 01:16:43.241861"]]
+  [1m[35m (5.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2018-02-20 01:16:43.250368"], ["updated_at", "2018-02-20 01:16:43.250368"]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2018-02-20 01:16:43.255841"], ["updated_at", "2018-02-20 01:16:43.255841"]]
+  [1m[35m (5.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-02-20 01:16:43.262573"], ["updated_at", "2018-02-20 01:16:43.262573"]]
+  [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2018-02-20 01:16:43.267860"], ["updated_at", "2018-02-20 01:16:43.267860"]]
+  [1m[35m (5.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2018-02-20 01:16:43.274395"], ["updated_at", "2018-02-20 01:16:43.274395"]]
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2018-02-20 01:16:43.280023"], ["updated_at", "2018-02-20 01:16:43.280023"]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2018-02-20 01:16:43.286266"], ["updated_at", "2018-02-20 01:16:43.286266"]]
+  [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2018-02-20 01:16:43.291544"], ["updated_at", "2018-02-20 01:16:43.291544"]]
+  [1m[35m (4.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2018-02-20 01:16:43.297012"], ["updated_at", "2018-02-20 01:16:43.297012"]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 76.25.101.242 at 2018-02-20 01:16:56 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+Redirected to https://97c72a984a194420b612d8a032968215.vfs.cloud9.us-east-2.amazonaws.com/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&sort=title
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&sort=title" for 76.25.101.242 at 2018-02-20 01:16:56 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"true", "PG"=>"true", "PG-13"=>"true"}, "sort"=>"title"}
+  [1m[36m (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 219ms (Views: 215.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?ratings%5BG%5D=true&ratings%5BR%5D=false&ratings%5BPG-13%5D=true&ratings%5BPG%5D=true&commit=Refresh&utf8=%E2%9C%93&sort=title" for 76.25.101.242 at 2018-02-20 01:17:00 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"true", "R"=>"false", "PG-13"=>"true", "PG"=>"true"}, "commit"=>"Refresh", "utf8"=>"✓", "sort"=>"title"}
+  [1m[36m (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'R', 'PG-13', 'PG')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=true&ratings%5BR%5D=false&ratings%5BPG-13%5D=true&ratings%5BPG%5D=true&commit=Refresh&utf8=%E2%9C%93&sort=title" for 76.25.101.242 at 2018-02-20 01:21:03 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"true", "R"=>"false", "PG-13"=>"true", "PG"=>"true"}, "commit"=>"Refresh", "utf8"=>"✓", "sort"=>"title"}
+  [1m[36m (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'R', 'PG-13', 'PG')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/default.self-59883626c3d8384e0b0c1e9ce82156f823faf2ccb5c2b840e38b5888275fff13.css?body=1" for 76.25.101.242 at 2018-02-20 01:21:03 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&ratings%5BR%5D=false&sort=release_date" for 76.25.101.242 at 2018-02-20 01:21:07 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"true", "PG"=>"true", "PG-13"=>"true", "R"=>"false"}, "sort"=>"release_date"}
+  [1m[36m (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&ratings%5BR%5D=false&sort=title" for 76.25.101.242 at 2018-02-20 01:21:11 +0000
+Cannot render console from 76.25.101.242! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"true", "PG"=>"true", "PG-13"=>"true", "R"=>"false"}, "sort"=>"title"}
+  [1m[36m (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.3ms)
