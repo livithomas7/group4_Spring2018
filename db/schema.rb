@@ -13,12 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20150809022253) do
 
-  create_table "Tenant Page", force: :cascade do |t|
+  create_table "tenant", force: :cascade do |t|
     t.string   "dashboard"
     t.string   "maintenance"
     t.string   "message"
     t.string   "documents"
     t.string   "payment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
