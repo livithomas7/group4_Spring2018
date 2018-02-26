@@ -4,37 +4,37 @@ As a Tenant
 I want to submit messages to my landlord
 Because I want to communicate easily with my landlord
 
-Feature: Tenant can view my profile
-As a Tenant
-I want to view my profile 
-Because I want to check my current status and address
+# Feature: Tenant can view my profile
+# As a Tenant
+# I want to view my profile 
+# Because I want to check my current status and address
 
-Feature: Tenant can change settings
-As a Tenant
-I want to change or view settings
-Because I want to change the layout of my web pages
+# Feature: Tenant can change settings
+# As a Tenant
+# I want to change or view settings
+# Because I want to change the layout of my web pages
 
-Feature: Tenant can go to homepage from any page
-As a Tenant
-I want to view all of my current information
-Because I want to know how much I owe, how many messages I have, how many maintenance requests I have and how many documents I have
+# Feature: Tenant can go to homepage from any page
+# As a Tenant
+# I want to view all of my current information
+# Because I want to know how much I owe, how many messages I have, how many maintenance requests I have and how many documents I have
 
-#Abbas's Cucumber Code
+# #Abbas's Cucumber Code
 
-Feature: Tenant can submit documents
-As a Tenant
-I want to submit documents to my landlord
-Because I want to communicate easily with my landlord
+# Feature: Tenant can submit documents
+# As a Tenant
+# I want to submit documents to my landlord
+# Because I want to communicate easily with my landlord
 
-Feature: Tenant can pay rent
-As a Tenant
-I want to make a payment 
-Because I want to pay my rent quick and easy
+# Feature: Tenant can pay rent
+# As a Tenant
+# I want to make a payment 
+# Because I want to pay my rent quick and easy
 
-Feature: Tenant can request maintenance
-As a Tenant
-I want to request maintenance
-Because I want to request maintenance quickly
+# Feature: Tenant can request maintenance
+# As a Tenant
+# I want to request maintenance
+# Because I want to request maintenance quickly
 
 #Livi's Cucumber Code
 Scenario: Testing main Messages features
