@@ -44,12 +44,10 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   
+
   #added
   gem 'byebug'
   gem 'database_cleaner'
@@ -62,6 +60,12 @@ end
 group :test do
   gem 'cucumber-rails' 
   gem 'cucumber-rails-training-wheels'
+
+  gem 'shoulda-matchers'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  
+  
 end
 
 group :production do
@@ -87,5 +91,3 @@ group :production do
   # Deploy with Capistrano
   # gem 'capistrano'  
 end
-
-

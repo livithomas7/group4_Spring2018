@@ -20,6 +20,7 @@ I want to view all of my current information
 Because I want to know how much I owe, how many messages I have, how many maintenance requests I have and how many documents I have
 
 #Abbas's Cucumber Code
+
 Feature: Tenant can submit documents
 As a Tenant
 I want to submit documents to my landlord
@@ -147,6 +148,7 @@ Scenario: Going back to the Dashboard from Maintenance Requests tab
   Then I should be back on the Dashboard page
 
 #Abbas's Cucumber Code
+
 Given I am on Tenant dashboard 
 When I follow “Documents” tap
 Then I should be on documents page
@@ -169,3 +171,5 @@ When I follow “Payment” tap
 Then I should be on Payment page
 When I press “Pay”
 Then I should see “Balance” equal to zero
+
+
