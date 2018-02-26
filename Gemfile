@@ -76,6 +76,7 @@ group :production do
   # Gems used only for assets and not required
   # in production environments by default.
 
+
   #gem 'therubyracer', '~> 0.12.0'
   gem 'sass-rails', '~> 5.0.3'
   gem 'coffee-rails', '~> 4.1.0'
@@ -90,4 +91,5 @@ group :production do
   
   # Deploy with Capistrano
   # gem 'capistrano'  
+  
 end
