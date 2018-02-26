@@ -1,3 +1,4 @@
+
 #!/usr/bin/env ruby
 
 vendored_cucumber_bin = Dir["#{File.dirname(__FILE__)}/../vendor/{gems,plugins}/cucumber*/bin/cucumber"].first
@@ -8,3 +9,4 @@ else
   require 'cucumber'
   load Cucumber::BINARY
 end
+

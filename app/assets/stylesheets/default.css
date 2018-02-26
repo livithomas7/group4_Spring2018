@@ -91,6 +91,7 @@ table#user.center{
 
 }
 
+
 #notice #warning {
   background: rosybrown;
   margin: 1em 0;
@@ -101,4 +102,12 @@ form label {
   line-height: 25px;
   font-weight: bold;
   color: maroon;
+}
+
+div.align {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
 }
