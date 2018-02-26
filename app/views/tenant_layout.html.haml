@@ -1,3 +1,4 @@
+
 %h1 Welcome Tenants
 
 %table#tenants
@@ -19,6 +20,11 @@
     %tr
       %td Age: 
 %img{:src => "/images/download.png"}
+
+/-# tenant_layout.html.haml
+
+/%html
+
 /	%head
 /		%title= yield(:title)
 /		= yield(:head)
@@ -30,4 +36,6 @@
 /			%a{ :href => "/views/tenant/docs", :title => "Documents" }
 /			%a{ :href => "/views/tenant/payment", :title => "Payment" }
 /		#content
+
 /			= yield
+

@@ -1,27 +1,3 @@
-
-%h1 Welcome Tenants
-
-%table#tenants
-  %tbody
-    %tr
-      %th Dashboard
-      //%td= link_to "Dashboard", tenant_path(dashboard)
-      %th Maintenance
-      %th Message
-      %th Documents
-      %th Payment
-%h1.align Profile 
-
-%table#user.center
-  %tbody 
-    %tr
-      %td Name:
-    %br
-    %tr
-      %td Age: 
-%img{:src => "/images/download.png"}
-
-=======
 !!!
 %html
   %head
@@ -64,19 +40,19 @@
       .w3-bar-block
         %a.w3-bar-item.w3-button.w3-padding.w3-white{:href => "#"}
           %i.fa.fa-user.fa-fw>
-            Profile
+            Profile
         %a.w3-bar-item.w3-button.w3-padding.w3-white{:href => "#"}
           %i.fa.fa-envelope.fa-fw>
-            Messages
+            Messages
         %a.w3-bar-item.w3-button.w3-padding.w3-white{:href => "#"} 
           %i.fa.fa-male.fa-fw>
-            Maintenance Requests
+            Maintenance Requests
         %a.w3-bar-item.w3-button.w3-padding.w3-white
           %i.fa.fa-credit-card.fa-fw>
-            Payments
+            Payments
         %a.w3-bar-item.w3-button.w3-padding.w3-white{:href => "#"}
           %i.fa.fa-cog.fa-fw>
-            Settings
+            Settings
         %br/
         %br/
     / Overlay effect when opening sidebar on small screens
@@ -164,7 +140,6 @@
       
 /%div
      
-
 /	%head
 /		%title= yield(:title)
 /		= yield(:head)
@@ -176,6 +151,4 @@
 /			%a{ :href => "/views/tenant/docs", :title => "Documents" }
 /			%a{ :href => "/views/tenant/payment", :title => "Payment" }
 /		#content
-
 /			= yield
-
