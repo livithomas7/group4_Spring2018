@@ -11,47 +11,87 @@ div#main {
   padding: 0 20px 20px;
 }
 a {
-  background: transparent;
+  background: Black;
 /*   background-color: yellow; */
   color: maroon;
   text-decoration: underline;
   font-weight: bold;
 }
+
+body {
+    
+    background-color: black;
+}
+
 h1 {
-  color: maroon;
+  color: white;
   font-size: 150%;
-  font-style: italic;
+  font-style: normal;
   display: block;
   width: 100%;
   border-bottom: 1px solid DarkSlateGrey;
 }
 h1.title {
   margin: 0 0 1em;
-  padding: 10px;
-  background-color: orange;
+  background-color: black;
   color: white;
-  border-bottom: 4px solid gold;
-  font-size: 2em;
+  border-bottom: 1px Grey;
+  font-size: 2.5em;
   font-style: normal;
 }
-table#movies {
+h1.align {
+  font-size: 2.5em;
+  text-align: center;
+}
+table#tenants {
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
   border-bottom: 2px solid black;
 }
-table#movies th {
+table#tenants th {
   border: 2px solid white;
   font-weight: bold;
-  background-color: wheat;
+  background-color: LightSteelBlue ;
 }
-table#movies th.hilite {
+table#tenants th.hilite {
   background-color: yellow;
 }
-table#movies th, table#movies td {
+table#tenants th, table#tenants td {
   padding: 4px;
   text-align: left;
 }
+table#user {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+table#user th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: LightSteelBlue ;
+}
+table#user th.hilite {
+  background-color: yellow;
+}
+table#user th, table#user td {
+  padding: 4px;
+  text-align: center;
+  display: table-row;
+  
+}
+table#user.center{
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  font-size: 1.2em;
+
+}
+
+
 #notice #warning {
   background: rosybrown;
   margin: 1em 0;
@@ -62,4 +102,12 @@ form label {
   line-height: 25px;
   font-weight: bold;
   color: maroon;
+}
+
+div.align {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
 }
