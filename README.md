@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
          ___        ______     ____ _                 _  ___  
         / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
        / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
@@ -47,3 +48,6 @@ the running app.
 # rottenpotatoes-rails-intro
 >>>>>>> d9b7202c223b0d1a0dc5fd8000c1024856ac4641
 >>>>>>> 4c1016c68bcaeb59eb4efb640454bfaa9ae20413
+=======
+# group4_Spring2018
+>>>>>>> 89f6939be5bb3d62207b1ec4fda0226ac9c439d7
